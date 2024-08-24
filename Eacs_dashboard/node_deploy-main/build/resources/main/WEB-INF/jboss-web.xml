@@ -1,0 +1,3 @@
+<jboss-web>
+    <context-root>/eacs-app</context-root>
+</jboss-web>

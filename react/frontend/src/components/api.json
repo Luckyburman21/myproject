@@ -1,0 +1,74 @@
+[
+    {
+        "label":"cluster1",
+        "value":10
+    },
+    {
+        "label":"cluster2",
+        "value":20
+    },
+    {
+        "label":"cluster3",
+        "value":30
+    },
+    {
+        "label":"cluster4",
+        "value":40
+    },
+    {
+        "label":"cluster5",
+        "value":50
+    }, {
+        "label":"cluster6",
+        "value":60
+    }, {
+        "label":"cluster7",
+        "value":70
+    }, {
+        "label":"cluster8",
+        "value":80
+    }, {
+        "label":"cluster9",
+        "value":90
+    }, {
+        "label":"cluster10",
+        "value":100
+    }, {
+        "label":"cluster11",
+        "value":200
+    }, {
+        "label":"cluster12",
+        "value":600
+    }, {
+        "label":"cluster13",
+        "value":100
+    }, {
+        "label":"cluster14",
+        "value":300
+    }, {
+        "label":"cluster15",
+        "value":500
+    }, {
+        "label":"cluster16",
+        "value":50
+    }, {
+        "label":"cluster17",
+        "value":60
+    }, {
+        "label":"cluster18",
+        "value":650
+    },
+    {
+        "label":"cluster19",
+        "value":150
+    }, {
+        "label":"cluster20",
+        "value":280
+    }, {
+        "label":"cluster21",
+        "value":260
+    }, {
+        "label":"cluster22",
+        "value":445
+    }
+]

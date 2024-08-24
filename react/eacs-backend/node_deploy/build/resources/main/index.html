@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Page</title>
+    <script>
+        // Function to fetch plain text data
+        function fetchData() {
+            fetch('http://localhost:8080/eacs/hello') // Ensure this URL is correct
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('response').innerText = data;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        async function fetchListData() {
+            alert("function called");
+            const res = await fetch('http://localhost:8080/eacs/getdata') // Ensure this URL is correct
+            if (res) {
+                alert("got res");
+                console.log("res result---------->")
+                console.log(res);
+                var list=await res.json();
+                // list.forEach((curr)=>{
+                //     console.log(curr.first_name);
+                // })
+                console.log("list console----->",Object.entries(list))
+                
+                const responseDiv = document.getElementById('response');
+                responseDiv.innerHTML = ''; // Clear any existing content
+                const ul = document.createElement('ul'); // Create a <ul> element
+              
+                for( var i=0 ; i<list.length ; i++){
+                    console.log(list[i])
+                }
+                // list.forEach(obj => {
+                //     console.log("inside list for each")
+                //     const li = document.createElement('li'); // Create a <li> element
+                //     li.innerText = obj.first_name; // Set the text to obj.first_name
+                //     ul.appendChild(li); // Append <li> to <ul>
+                // });
+                responseDiv.appendChild(ul); // A
+            }
+
+
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('fetchListButton').addEventListener('click', fetchListData);
+        });
+
+        // Function to fetch JSON data
+        function fetchJsonData() {
+            fetch('http://localhost:8080/eacs/rest/endpoint') // Ensure this URL is correct
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').innerText = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('fetchDataButton').addEventListener('click', fetchData);
+            document.getElementById('fetchJsonButton').addEventListener('click', fetchJsonData);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Deployment Successful!</h1>
+    <button id="fetchDataButton">Fetch Plain Text Data</button>
+    <button id="fetchJsonButton">Fetch JSON Data</button>
+    <button id="fetchListButton">Fetch List Data</button>
+    <div id="response"></div>
+</body>
+
+</html>
